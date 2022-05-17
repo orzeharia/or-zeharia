@@ -1,0 +1,95 @@
+.active {
+    background-color: rgb(142, 160, 194);
+}
+
+
+li {
+    display: inline;
+}
+
+nav a {
+    font-size: 30px;
+    border: 2px solid rgb(198, 203, 209);
+}
+
+
+
+
+*{
+    font-style:oblique;
+    color:black
+}
+
+div{
+    border:2px solid rgb(148, 170, 167); padding: 5px; margin: 20px;
+}
+
+.headerContact{
+    border:2px solid rgb(148, 170, 167); padding: 5px; margin: 20px; text-align: center;
+}
+.littel_header{
+    border:2px solid rgb(111, 121, 119);font-size: 20px; margin: 20px;
+}
+
+#container{
+    display: grid;
+    grid-template-areas: 'pic1 pic2 pic3 '  'header main nav'
+    'header main nav'
+   ;
+}
+
+#pic1{
+    grid-area: pic1;
+    width: 350px;
+    height: 200px;
+}
+.pic2{
+    grid-area: pic2;
+    width: 350px;
+    height: 200px;
+}
+#pic3{
+    grid-area: pic3;
+    width: 350px;
+    height: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    #container{
+        display: grid;
+        grid-template-areas: 'pic1'  ' pic2'
+        'pic3 '
+       ;
+    }
+    
+    #container2{
+        display: grid;
+      text-align: center;
+    }
+}
+
+#container2{
+    display: grid;
+ 
+   
+}
+#animation{
+    animation: blink 4s ease-in-out 0.5s 5;
+}
+
+@keyframes blink {
+    0%{ opacity: 0;}
+    33%{opacity: 0.5;}
+    66%{opacity: 1;}
+}
+#animation2{
+    animation: blink2 4s ease-in-out 0.5s 5;
+}
+
+@keyframes blink2 {
+    0%{ opacity: 1;}
+    33%{opacity: 0.5;}
+    66%{opacity: 0;}
+}
+
+

@@ -5,65 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="CSS.css">
+    <script defer src="..//static/active.js"></script>
 </head>
 <style>
-    body{
-        background-image: url("../static/background.png");
-        }
-  
-    *{
-        font-style:oblique;
-        color: black;
+body{
+    background-image: url("../static/background.png");
     }
-   
 </style>
 <body>
- 
-        <div style="border:2px solid rgb(148, 170, 167); padding: 5px; margin: 20px;">
+    <header>web of dogs by or zeharia</header> 
+    <nav>
+        <ul>
+            <li> <a href="home.HTML">go to main</a></li>
+            <li> <a href="contact.HTML">to connect</a></li>
+        </ul>
+
+    </nav>
+    <br>
    
-            <h1 style="text-align: center; font-size: 40px;">Sign up</h1> 
+        <div>
+            <h1 class ="headerContact">Sign up</h1> 
          </div>
-         <span style="border:2px solid rgb(111, 121, 119);font-size: 20px;"> please sign up</span><br><br>
+         <span class= "littel_header "> please sign up</span><br><br>
+
+         <div id="container2">
+            <form action="URL" method="post"  onsubmit="message(); return false";>
+                
+                <label for="FullName">full name</label><br>
+                <input type="text" id="FullName" name="FullName" autocomplete="on" required><br><br>
+                <label for="email">email</label><br>
+                <input type="email" id="email" name="email"><br> <br>
+          
+             
+                <label for="agree">I agree to connect</label><br>
+                <input type="checkbox" id="agree" name="agree"><br><br>
+                <label for="num of dogs at home">Num of dogs at home</label><br>
+                <input id="numDog" type="number" name="num"
+                min="0"
+                max="5"
+                ><br>
+                <label for="birth">Date of birth</label>
+                <input type="date" name="date" id="date"
+               ><br><br>
+                
+                <label for="love">How much you love dogs?</label><br>
+                <input type="range" name="range" id="range"
+        min="0"
+        max="10"><br><br>
+        <label for="pwd">Please choose password:</label><br>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <label for="dogs">Choose a type of dogs:</label><br>
+        <select name="dogs" id="dogs">
+          <option value="Akitas ">Akitas</option>
+          <option value="Affenpinscher">Affenpinscher</option>
+          <option value="Labrador">Labrador</option>
+          <option value="else">else</option>
+        </select><br><br>
         
-      
-        <form action="URL", method="post">
-            <label for="FullName">full name</label><br>
-            <input type="text" id="FullName" name="FullName" autocomplete="on" required><br><br>
-            <label for="email">email</label><br>
-            <input type="email" id="email" name="email"><br> <br>
-      
+        <input type="submit" onclick="message()" ><br>
+        <p id="ans"></p> 
+    </form> 
+</div>
+    <br><br>
+
+  
+
          
-            <label for="agree">I agree to connect</label><br>
-            <input type="checkbox" id="agree" name="agree"><br><br>
-            <label for="num of dogs at home">Num of dogs at home</label><br>
-            <input type="number" name="num"
-            min="0"
-            max="5"
-            ><br>
-            <label for="birth">Date of birth</label>
-            <input type="date" name="date" id="date"
-           ><br><br>
-            
-            <label for="love">How much you love dogs?</label><br>
-            <input type="range" name="range" id="range"
-    min="0"
-    max="10"><br><br>
-    <label for="pwd">Please choose password:</label><br>
-    <input type="password" id="pwd" name="pwd"><br><br>
-    <label for="dogs">Choose a type of dogs:</label><br>
-    <select name="dogs" id="dogs">
-      <option value="Akitas ">Akitas</option>
-      <option value="Affenpinscher">Affenpinscher</option>
-      <option value="Labrador">Labrador</option>
-      <option value="else">else</option>
-    </select><br><br>
-    
-    <input type="submit"><br>
-            <ul>
-                <li> <a href="home.HTML">go to main</a></li>
-            </ul>
-            
-        </form>  
+        
+
+          
+      
+        
 
    
 </body>

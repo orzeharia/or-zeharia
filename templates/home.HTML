@@ -5,45 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="CSS.css">
+    <script defer src="..//static/active.js"></script>
     <style>
         body{
             background-color: antiquewhite;
         }
-        *{
-            font-style:oblique;
-            color:black
-        }
-        ul{
-        float: left;
-        margin: 20px;
-        list-style: none;
-    }
-    ul img {
-        display: inline-block;
-    }
+      
+    
     </style>
 </head>
 <body>
-   
-        <div style="border:2px solid rgb(162, 179, 176); margin: 5px ; padding: 2px; ;">
-            <h1 style="text-align: center;font-size: 30px">DOGS</h1> 
+    <header>web of dogs by or zeharia</header> 
+    <nav>
+        <ul>
+            
+            <li> <a href="home.HTML">go to main</a></li>
+            <li> <a href="contact.HTML">to connect</a></li>
+        </ul> 
+     </nav>
+     
+    
+        <div>
+            <h1 class="headerContact">DOGS</h1> 
          </div><br><br>
     
-     <span style="border:2px solid rgb(176, 189, 186); margin: 5px; font-size: 20px;"> Sweet dogs</span><br><br>
+     <span class="littel_header"> Sweet dogs</span><br><br>
     
-    <ul>
-        <li> <a href="contact.HTML">to connect</a></li> <br><br>
-        
+ 
+    
+     <div id="container">
+       <div id="pic1">
         <img src="../static/home1.jpg" alt=""
-            style="width: 350px;"
-            >
-            <img src="../static/home2.jpg" alt=""
-            style="width: 350px;"
-            >
-            <img src="../static/home3.jpg" alt=""
-            style="width: 350px;"
-            >
-    </ul>
+        style="width: 350px; height: 200px;"
+        >
+       </div> 
+       
+       <div id="animation"class="pic2">
+        <img src="../static/home2.jpg" alt=""
+        style="width: 350px; height: 200px"
+        >
+       </div>
+
+       <div id="animation2" class="pic2">
+        <img src="../static/home4.jpg" alt=""
+        style="width: 350px; height: 200px;">
+        
+        </div>
+
+
+       <div id="pic3" >
+        <img src="../static/home3.jpg" alt=""
+        style="width: 350px; height: 200px;"
+        >
+       </div>
+
+     </div>
+      
+     
+     <button onclick="fun_text()">More about the site</button>
+     <p id="text_open"></p>
+    
    
 </body>
 </html>
