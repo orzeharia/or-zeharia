@@ -13,12 +13,6 @@ const navLinks = document.querySelectorAll('nav a').forEach(link => {
 });
 
 
-/*
-function calcu(){
-  document.getElementById("ans").innerHTML=text1+document.getElementById("numDog").value*200;
-}
-*/
-
 var i = 0;
 var txt = 'The site was established in 2022. The site is for people who love dogs.';
 var speed=20;

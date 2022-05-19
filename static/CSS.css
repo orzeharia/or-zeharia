@@ -1,5 +1,5 @@
 .active {
-    background-color: rgb(142, 160, 194);
+    background-color: rgb(95, 129, 190);
 }
 
 
@@ -7,13 +7,22 @@ li {
     display: inline;
 }
 
-nav a {
+
+
+nav ul{
+    background-color:rgb(142, 160, 194);
     font-size: 30px;
-    border: 2px solid rgb(198, 203, 209);
 }
 
+.pictures{
+    width: 350px;
+    height: 200px;
+}
 
-
+#but_text{
+    background-color:rgb(198, 203, 209);
+    margin: 20px;
+}
 
 *{
     font-style:oblique;
@@ -21,9 +30,8 @@ nav a {
 }
 
 div{
-    border:2px solid rgb(148, 170, 167); padding: 5px; margin: 20px;
+   padding: 5px; margin: 20px;
 }
-
 .headerContact{
     border:2px solid rgb(148, 170, 167); padding: 5px; margin: 20px; text-align: center;
 }
