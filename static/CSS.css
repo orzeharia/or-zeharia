@@ -41,9 +41,7 @@ div{
 
 #container{
     display: grid;
-    grid-template-areas: 'pic1 pic2 pic3 '  'header main nav'
-    'header main nav'
-   ;
+    grid-template-areas: 'pic1 pic2 pic3 ' ;
 }
 
 #pic1{
@@ -61,6 +59,10 @@ div{
     width: 350px;
     height: 200px;
 }
+#container2{
+    display: grid;
+   
+}
 
 @media only screen and (max-width: 600px) {
     #container{
@@ -76,11 +78,7 @@ div{
     }
 }
 
-#container2{
-    display: grid;
- 
-   
-}
+
 #animation{
     animation: blink 4s ease-in-out 0.5s 5;
 }
