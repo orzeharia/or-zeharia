@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %} Assianment 3 Page{% endblock %}
+
+{% block tohen %}
+
+<h1 class="headerContact"> Assianment 3.2 Page</h1>
+
+<div id="search">
+    <h2>search user by email</h2>
+
+
+    <form action="/assignment3_2" method="GET">
+        <input type="email" name="email" placeholder="Email">
+        <input type="submit">
+    </form>
+
+    {% if email %}
+    <h4> the details of this user</h4>
+    <h4> user name : {{name}}</h4>
+    <h4> user email : {{email}}</h4>
+    <h4> user password : {{password}}</h4>
+
+    {% endif %}
+
+    {% if message and request.method == 'GET' %}
+    <h4 class="wrongMeessage">{{ message }}</h4>
+    {% endif %}
+
+    {% if usersDetail %}
+    <h3> all user details </h3>
+    {% for i in range( (usersDetail)|length) %}
+    <h4> user number {{i}}: {{ usersDetail[i] }}</h4><br>
+    {% endfor %}
+    {% endif %}
+</div>
+
+<div id="login_out">
+    {% if request.method == 'POST' %}
+    {% if message %}
+    <h4 class="helpMeessage">{{ message }}</h4>
+    {% endif %}
+
+    {% endif %}
+
+    {% if not session['logedin'] %}
+ <h2>log in</h2>
+
+
+
+    <form action="/assignment3_2" method="POST">
+        <input type="email" name="mail" placeholder="Mail"><br> <br>
+        <input type="password" name="password" placeholder="Password"><br> <br>
+
+        <input type="submit">
+    </form>
+
+
+    {% else %}
+
+    <form action="/log_out" method=['POST']>
+        <br> <br>
+        <button>Log Out</button>
+    </form>
+
+    {% endif %}
+</div>
+
+
+{% endblock %}

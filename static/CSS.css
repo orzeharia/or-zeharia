@@ -3,13 +3,13 @@
 }
 
 
-li {
+a {
     display: inline;
 }
 
 
 
-nav ul{
+#nav{
     background-color:rgb(142, 160, 194);
     font-size: 30px;
 }
@@ -99,3 +99,53 @@ div{
 }
 
 
+.cont{
+    border: darkgrey 3px solid;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 50%;
+    padding: 10px;
+    align-content: center;
+}
+
+#choose_hobbie{
+border: darkgrey 3px solid;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    background-color: lightblue;
+
+
+}
+
+.helpMeessage{
+    color: green;
+    font-weight: bold;
+}
+
+.wrongMeessage{
+       color: darkred;
+    font-weight: bold;
+}
+
+#search{
+    text-align: center;
+    background-color: LightCyan;
+
+}
+
+#login_out{
+    text-align: center;
+    background-color:Silver ;
+
+
+}
+
+#picInstegram{
+    padding: 7px;
+    width: 40px;
+    height: 40px;
+
+}

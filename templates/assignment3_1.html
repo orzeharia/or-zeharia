@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %} Assianment 3 Page{% endblock %}
+
+{% block tohen %}
+
+<h1 class="headerContact"> Assianment 3.1 Page</h1>
+
+<div id="choose_hobbie">
+  <h3>What do you like to do with your dog ?</h3>
+
+ <form action="/assignment3_1" method="GET">
+        <input type="text" name="user_hob" placeholder="User_hob"><br><br>
+         <button> send your  hobbie</button>
+    </form>
+
+{% if message %}
+    <h4 class="helpMeessage">{{ message }}</h4>
+    {% endif %}
+
+<h4>
+   your hobbie with your dig is: {{session['user_hobbie']}}
+</h4>
+
+{% if session['user_hobbie'] %}
+<form action="/delete_hobbie" method=['GET']>
+        <br> <br>
+        <button> delete this hobbie </button>
+    </form>
+{% endif %}
+</div>
+
+
+
+{% for hobbie, val in hobbies_dict.items()  %}
+
+{% if val == 'social' %}
+
+{{ social_li.append( hobbie) or "" }}
+
+{%else%}
+
+{{ alone_li.append( hobbie) or "" }}
+
+{% endif %}
+
+
+{% endfor %}
+
+<div class="cont">
+    <h2> social hobbies with your dog</h2>
+    <ul>
+
+        {% for hobbie_social in social_li %}
+        <li>
+             <h5>   {{hobbie_social | upper()}}</h5>
+        </li>
+
+
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+
+<div class="cont">
+    <h2> alone hobbies with your dog</h2>
+    <ul>
+        {% for hobbie_alone in alone_li %}
+        {% if hobbie_alone !='' %}
+        <li>
+           <h5> {{hobbie_alone | upper()}}</h5>
+        </li>
+
+
+        {% endif %}
+
+
+        {% endfor %}
+
+    </ul>
+</div>
+{{super()}}
+
+{% endblock %}

@@ -1,33 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="..//static/CSS.css">
-    <script defer src="..//static/active.js"></script>
-</head>
+
+    {% extends 'base.html' %}
+
+
+{% block tohen %}
 <style>
 body{
     background-image: url("../static/background.png");
     }
 </style>
-<body>
-    <nav>
-        <ul>
-            <li> <a href="home.HTML">go to main</a></li>
-            <li> <a href="contact.HTML">to connect</a></li>
-        </ul>
 
-    </nav>
-    <header>web of dogs by or zeharia</header> 
-  
+
+
+
+    <header>web of dogs by or zeharia</header>
+
+  {% if session['logedin'] %}
+        <h1 class ="headerContact">Welcome, {{ session['username'] | upper() }}</h1>
+    {% else %}
+        <h1 class ="headerContact">Welcome to Log-In Page</h1>
+        {% if message %}
+            <h2>{{ message }}</h2>
+        {% endif %}
+    {% endif %}
+
     <br>
-   
-        <div>
-            <h1 class ="headerContact">Sign up</h1> 
-         </div>
+
+
          <span class= "littel_header "> please sign up</span><br><br>
 
          <div id="container2">
@@ -70,15 +68,7 @@ body{
 </div>
     <br><br>
 
-  
-
-         
-        
-
-          
-      
-        
 
    
-</body>
+{% endblock %}
 </html>
