@@ -136,7 +136,8 @@ def assignment3_1b_func():
         if type.lower()!='social' and type.lower()!='alone':
             return render_template('assignment3_1.html', hobbies_dict=hobbies_dict, social_li=social_li,
                                    alone_li=alone_li, message='You did not make the right choice, choose social or alone')
-    return render_template('assignment3_1.html', hobbies_dict=hobbies_dict, social_li=social_li, alone_li=alone_li)
+        
+    return redirect('assignment3_1.html', hobbies_dict=hobbies_dict, social_li=social_li, alone_li=alone_li)
 
 @app.route('/delete_hobbie')
 def delete_func():
