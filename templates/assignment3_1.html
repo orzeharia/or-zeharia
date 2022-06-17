@@ -30,6 +30,8 @@
 
     {% if session['have_hobbie'] %}
     {% if not session['hobbieFromList'] %}
+     <h3> What type does the hobby you have chosen belong to? Social or alone</h3>
+
     <form action="/assignment3_1b" method="GET">
         <input type="text" name="hob_type" placeholder="Hob_type"><br><br>
         <button> send type hobbie</button>
