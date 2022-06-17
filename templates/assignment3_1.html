@@ -7,29 +7,43 @@
 <h1 class="headerContact"> Assianment 3.1 Page</h1>
 
 <div id="choose_hobbie">
-  <h3>What do you like to do with your dog ?</h3>
+    {% if not session['have_hobbie'] %}
+    <h3>What do you like to do with your dog ?</h3>
 
- <form action="/assignment3_1" method="GET">
+    <form action="/assignment3_1" method="GET">
         <input type="text" name="user_hob" placeholder="User_hob"><br><br>
-         <button> send your  hobbie</button>
+        <button> send your hobbie</button>
     </form>
 
-{% if message %}
+    {% if message %}
     <h4 class="helpMeessage">{{ message }}</h4>
     {% endif %}
 
-<h4>
-   your hobbie with your dig is: {{session['user_hobbie']}}
-</h4>
+    {% endif %}
+    <h4>
+        your hobbie with your dig is: {{session['user_hobbie']}}
+    </h4>
 
-{% if session['user_hobbie'] %}
-<form action="/delete_hobbie" method=['GET']>
-        <br> <br>
-        <button> delete this hobbie </button>
+     {% if message and session['hobbieFromList']  %}
+    <h4 class="helpMeessage">{{ message }}</h4>
+    {% endif %}
+
+    {% if session['have_hobbie'] %}
+    {% if not session['hobbieFromList'] %}
+    <form action="/assignment3_1b" method="GET">
+        <input type="text" name="hob_type" placeholder="Hob_type"><br><br>
+        <button> send type hobbie</button>
     </form>
-{% endif %}
+    {% if message %}
+    <h4 class="helpMeessage">{{ message }}</h4>
+    {% endif %}
+    {% endif %}
+    <form action="/delete_hobbie" method=['GET']>
+        <br> <br>
+        <button> delete this hobbie</button>
+    </form>
+    {% endif %}
 </div>
-
 
 
 {% for hobbie, val in hobbies_dict.items()  %}
@@ -52,16 +66,16 @@
     <ul>
 
         {% for hobbie_social in social_li %}
-        <li>
-             <h5>   {{hobbie_social | upper()}}</h5>
-        </li>
 
+        {% if hobbie_alone !='' %}
+        <li>
+            <h5> {{hobbie_social | upper()}}</h5>
+        </li>
+        {% endif %}
 
         {% endfor %}
     </ul>
 </div>
-
-
 
 
 <div class="cont">
@@ -70,7 +84,7 @@
         {% for hobbie_alone in alone_li %}
         {% if hobbie_alone !='' %}
         <li>
-           <h5> {{hobbie_alone | upper()}}</h5>
+            <h5> {{hobbie_alone | upper()}}</h5>
         </li>
 
 
