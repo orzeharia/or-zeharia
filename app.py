@@ -52,6 +52,12 @@ def assignment3_2_func():
         print(usermail)
         password = request.form['password']
         print(password)
+        if password == '' and usermail == '':
+            return render_template('assignment3_2.html', message='Fill in the field of the password and email')
+        if usermail == '':
+            return render_template('assignment3_2.html', message='Fill in the field of the email')
+        if password == '':
+            return render_template('assignment3_2.html', message='Fill in the field of the password')
         if usermail in emails:
             Index = index_by_email(usermail)
             user_password = usersDetail[Index]['password']
@@ -136,7 +142,7 @@ def assignment3_1b_func():
         if type.lower()!='social' and type.lower()!='alone':
             return render_template('assignment3_1.html', hobbies_dict=hobbies_dict, social_li=social_li,
                                    alone_li=alone_li, message='You did not make the right choice, choose social or alone')
-        
+
     return redirect('assignment3_1.html', hobbies_dict=hobbies_dict, social_li=social_li, alone_li=alone_li)
 
 @app.route('/delete_hobbie')
